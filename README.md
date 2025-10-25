@@ -1,59 +1,45 @@
+# Crowdfunding Dashboard 
 
-![tw-banner](https://github.com/thirdweb-example/next-starter/assets/57885104/20c8ce3b-4e55-4f10-ae03-2fe4743a5ee8)
+## Overview
 
-# thirdweb-next-starter
+This project is a **decentralized crowdfunding platform** built on **Thirdweb** and **Ethereum (Sepolia testnet)**. It allows users to **create, deploy, and manage crowdfunding campaigns** directly from the dashboard. 
+---
 
-Starter template to build an onchain react native app with [thirdweb](https://thirdweb.com/) and [next](https://nextjs.org/).
+## Features
 
-## Installation
+1. **Dashboard**
+   - Displays a list of campaigns created by the connected user.
+   - Allows users to easily navigate between campaigns.
 
-Install the template using [thirdweb create](https://portal.thirdweb.com/cli/create)
+2. **Campaign Creation**
+   - Users can create a new crowdfunding campaign via a modal form.
+   - Campaign parameters include:
+     - Name
+     - Description
+     - Funding Goal
+     - Campaign Length (in days)
+ 
 
-```bash
-  npx thirdweb create app --next
-```
+3. **Smart Contract Deployment**
+   - Uses **Thirdweb’s `deployPublishedContract`** to deploy a new crowdfunding contract per campaign.
+   - Contracts are deployed from a Crowdfunding Factory.
+   - Includes all campaign metadata, including the video URL.
 
-## Environment Variables
+4. **User Campaigns**
+   - Displays campaigns created by the currently connected wallet.
+   - Uses Thirdweb hooks (`useReadContract`) to fetch campaigns from the factory contract.
 
-To run this project, you will need to add the following environment variables to your .env file:
+---
 
-`CLIENT_ID`
+## Tech Stack
 
-To learn how to create a client ID, refer to the [client documentation](https://portal.thirdweb.com/typescript/v5/client). 
+- **Frontend**: React + Next.js (`'use client'`)
+- **Blockchain SDK**: Thirdweb, Solidity
+- **Smart Contracts**: Crowdfunding contract published on Thirdweb
+- **Storage (for videos)**: Can be integrated with IPFS / NFT.storage / Web3.Storage
+- **Styling**: Tailwind CSS
 
-## Run locally
+---
 
-Install dependencies
+## Folder Structure
 
-```bash
-yarn
-```
-
-Start development server
-
-```bash
-yarn dev
-```
-
-Create a production build
-
-```bash
-yarn build
-```
-
-Preview the production build
-
-```bash
-yarn start
-```
-
-## Resources
-
-- [Documentation](https://portal.thirdweb.com/typescript/v5)
-- [Templates](https://thirdweb.com/templates)
-- [YouTube](https://www.youtube.com/c/thirdweb)
-- [Blog](https://blog.thirdweb.com)
-
-## Need help?
-
-For help or feedback, please [visit our support site](https://thirdweb.com/support)
