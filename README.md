@@ -39,7 +39,5 @@ This project is a **decentralized crowdfunding platform** built on **Thirdweb** 
 - **Storage (for videos)**: Can be integrated with IPFS / NFT.storage / Web3.Storage
 - **Styling**: Tailwind CSS
 
----
 
-## Folder Structure
 
